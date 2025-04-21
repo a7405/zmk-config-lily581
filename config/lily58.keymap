@@ -17,7 +17,12 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&kp A>;
+        };
+
+        bbb {
+            bindings = <&kp B>;
+            key-positions = <42 43>;
         };
     };
 
@@ -110,11 +115,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans          &trans  &trans                    &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &msc SCRL_UP    &trans  &trans                    &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans
-&trans  &trans  &trans  &msc SCRL_DOWN  &trans  &trans                    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans          &trans  &trans  &trans    &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans          &trans  &trans                      &trans    &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &msc SCRL_UP    &trans  &trans                      &trans    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &msc SCRL_DOWN  &trans  &trans                      &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans    &trans    &trans          &trans          &trans           &trans  &trans
+                        &trans          &trans  &trans  &trans    &mkp MB1  &mkp MB2  &trans          &trans
             >;
         };
     };
