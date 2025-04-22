@@ -14,15 +14,17 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        to0 {
+            bindings = <&to 0>;
+            key-positions = <42 43>;
             timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp A>;
+            layers = <3>;
         };
 
-        bbb {
-            bindings = <&kp B>;
-            key-positions = <42 43>;
+        to000 {
+            bindings = <&tog 0>;
+            key-positions = <54 55>;
+            layers = <3>;
         };
     };
 
@@ -115,11 +117,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans          &trans  &trans                      &trans    &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &msc SCRL_UP    &trans  &trans                      &trans    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &trans  &msc SCRL_DOWN  &trans  &trans                      &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans    &trans    &trans          &trans          &trans           &trans  &trans
-                        &trans          &trans  &trans  &trans    &mkp MB1  &mkp MB2  &trans          &trans
+&trans  &trans  &trans    &trans    &trans     &trans                              &trans            &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &msc SCRL_UP                        &msc MOVE_Y(5)    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN                      &msc MOVE_Y(-10)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans          &trans    &trans    &trans            &trans          &trans          &trans           &trans  &trans
+                          &trans    &trans     &trans          &trans    &mkp MB1  &mkp MB2          &trans          &trans
             >;
         };
     };
