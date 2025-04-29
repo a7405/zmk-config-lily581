@@ -101,7 +101,7 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &kp C_VOLUME_DOWN  &kp K_MUTE  &kp C_VOLUME_UP  &trans                                     &trans            &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT       &trans  &trans
+&trans  &trans  &kp C_VOLUME_DOWN  &kp K_MUTE  &kp C_VOLUME_UP  &trans                                     &trans            &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT       &trans  &kp PRINTSCREEN
 &trans  &trans  &trans             &kp UP      &trans           &msc SCRL_UP                               &msc MOVE_Y(5)    &trans          &mmv MOVE_UP      &trans           &trans  &trans
 &trans  &trans  &kp LEFT           &kp DOWN    &kp RIGHT        &msc SCRL_DOWN                             &msc MOVE_Y(-10)  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans             &trans      &trans           &trans          &trans    &kt RIGHT_SHIFT  &trans            &trans          &trans            &trans           &trans  &trans
