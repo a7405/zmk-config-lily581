@@ -14,22 +14,15 @@
     combos {
         compatible = "zmk,combos";
 
-        to3 {
-            bindings = <&to 2>;
-            key-positions = <52 55>;
-            layers = <0>;
-        };
-
-        to0 {
-            bindings = <&to 0>;
-            key-positions = <52 55>;
-            layers = <2>;
-        };
-
         Cnt_shi_3 {
             bindings = <&kt RCTRL>;
             key-positions = <43 54>;
             layers = <2>;
+        };
+
+        lang {
+            bindings = <&kp LA(LEFT_SHIFT)>;
+            key-positions = <52 55>;
         };
     };
 
@@ -91,11 +84,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &kp C_AC_HOME  &kp K_FIND     &kp HOME   &kp C_AL_FILE_BROWSER  &trans             &trans
-&kp F1          &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7         &kp F8         &kp F9     &kp F10                &kp F11            &kp F12
-&kp GRAVE       &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET      &kp AMPS       &kp ASTRK  &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp TILDE
-&trans          &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp QMARK     &trans        &trans    &trans  &trans         &kp SEMICOLON  &kp PLUS   &kp LBRC               &kp RBRC           &kp PIPE
-                                                     &trans             &trans        &trans        &trans    &trans  &trans         &trans         &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &kp C_AC_HOME  &kp K_FIND  &kp HOME   &kp C_AL_FILE_BROWSER  &trans             &trans
+&kp F1          &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7         &kp F8      &kp F9     &kp F10                &kp F11            &kp F12
+&kp GRAVE       &kp EXCL          &kp AT             &kp HASH           &kp PRCNT     &kp DOLLAR                      &kp SEMICOLON  &kp CARET   &kp ASTRK  &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp TILDE
+&trans          &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp QMARK     &trans        &trans    &trans  &trans         &kp AMPS    &kp PLUS   &kp LBRC               &kp RBRC           &kp PIPE
+                                                     &trans             &trans        &trans        &trans    &trans  &trans         &trans      &trans
             >;
         };
 
