@@ -71,7 +71,7 @@
 &kp TAB    &kp Q   &kp W   &mt GRAVE E   &kp R      &kp T                               &kp Y   &kp U              &kp I      &kp O    &kp P          &kp LBKT
 &kp LC(Z)  &kp A   &kp S   &kp D         &kp F      &kp G                               &kp H   &kp J              &kp K      &kp L    &kp SEMI       &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C         &kp V      &kp B        &kp LBKT     &kp RBKT  &kp N   &kp M              &kp COMMA  &kp DOT  &mt BSLH FSLH  &kp RIGHT_SHIFT
-                           &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &kp RET   &to 2   &mt LC(BSPC) BSPC  &kp LALT
+                           &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &kp RET   &to 3   &mt LC(BSPC) BSPC  &kp LALT
             >;
         };
 
@@ -99,6 +99,16 @@
 &trans  &trans  &kp LEFT           &kp DOWN    &kp RIGHT        &msc SCRL_DOWN                             &msc MOVE_Y(-10)  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans             &trans      &trans           &trans          &trans    &kt RIGHT_SHIFT  &trans            &trans          &trans            &trans           &trans  &trans
                                    &trans      &trans           &trans          &trans    &mkp MB1         &mkp MB2          &trans          &trans
+            >;
+        };
+
+        mouse2 {
+            bindings = <
+&trans  &trans  &kp C_VOLUME_DOWN  &kp K_MUTE      &kp C_VOLUME_UP  &trans                                       &trans            &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans  &kp PRINTSCREEN
+&trans  &trans  &trans             &mmv MOVE_UP    &trans           &msc SCRL_UP                                 &msc MOVE_Y(5)    &kt LEFT_SHIFT  &kp UP            &kt RCTRL   &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                               &msc MOVE_Y(-10)  &kp LEFT        &kp DOWN          &kp RIGHT   &trans  &trans
+&trans  &trans  &trans             &trans          &trans           &trans          &trans      &kt RIGHT_SHIFT  &trans            &trans          &trans            &trans      &trans  &trans
+                                   &trans          &trans           &mkp MB1        &mkp MB2    &trans           &to 0             &trans          &trans
             >;
         };
     };
