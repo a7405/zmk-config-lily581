@@ -67,11 +67,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp N1     &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                              &kp N7                &kp N8             &kp N9     &kp N0   &kp MINUS      &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E         &kp R      &mt GRAVE T                         &kp Y                 &kp U              &kp I      &kp O    &kp P          &kp LBKT
-&kp LC(Z)  &kp A   &kp S   &kp D         &kp F      &kp G                               &kp H                 &kp J              &kp K      &kp L    &kp SEMI       &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C         &kp V      &kp B        &kp LBKT     &kp RBKT  &kp N                 &kp M              &kp COMMA  &kp DOT  &mt BSLH FSLH  &kp RIGHT_SHIFT
-                           &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &kp RET   &lt 3 LA(LEFT_SHIFT)  &mt LC(BSPC) BSPC  &kp LALT
+&kp N1     &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                                 &kp N7                &kp N8             &kp N9     &kp N0   &kp MINUS      &kp EQUAL
+&kp TAB    &kp Q   &kp W   &kp E         &kp R      &mt GRAVE T                            &kp Y                 &kp U              &kp I      &kp O    &kp P          &kp LBKT
+&kp LC(Z)  &kp A   &kp S   &kp D         &kp F      &kp G                                  &kp H                 &kp J              &kp K      &kp L    &kp SEMI       &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C         &kp V      &kp B        &kp LBKT     &kp RBKT     &kp N                 &kp M              &kp COMMA  &kp DOT  &mt BSLH FSLH  &kp RIGHT_SHIFT
+                           &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &lt 4 ENTER  &lt 3 LA(LEFT_SHIFT)  &mt LC(BSPC) BSPC  &kp LALT
             >;
         };
 
@@ -109,6 +109,16 @@
 &trans  &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                                    &msc MOVE_Y(-10)  &kp LEFT        &kp DOWN          &kp RIGHT   &trans  &trans
 &trans  &trans  &trans             &trans          &trans           &trans          &trans      &kt RIGHT_SHIFT       &trans            &trans          &trans            &trans      &trans  &trans
                                    &trans          &trans           &mkp MB1        &mkp MB2    &mt LEFT_SHIFT ENTER  &trans            &trans          &trans
+            >;
+        };
+
+        strelochki {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
