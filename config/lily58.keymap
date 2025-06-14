@@ -53,6 +53,15 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        in_yazz_TH: in_yazz_TH {
+            compatible = "zmk,behavior-hold-tap";
+            label = "IN_YAZZ_TH";
+            bindings = <&new_macro>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <(-1)>;
+        };
     };
 
     macros {
@@ -127,11 +136,11 @@
 
         strelochki {
             bindings = <
-&trans  &kp LA(LS(LEFT_SHIFT))  &kt LA(LEFT_SHIFT)  &sk LA(LEFT_SHIFT)  &new_macro  &trans                     &trans  &trans    &trans  &trans    &trans     &trans
-&trans  &trans                  &trans              &trans              &trans      &trans                     &trans  &trans    &trans  &trans    &trans     &trans
-&trans  &kp LC(A)               &kp LC(Z)           &kp LC(C)           &kp LC(V)   &kp DEL                    &trans  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans
-&trans  &trans                  &trans              &trans              &trans      &trans   &trans    &trans  &trans  &trans    &trans  &trans    &trans     &trans
-                                                    &trans              &trans      &trans   &trans    &trans  &trans  &trans    &trans
+&trans  &in_yazz_TH 0 LA(LEFT_SHIFT)  &trans     &trans     &new_macro  &trans                     &trans  &trans    &trans  &trans    &trans     &trans
+&trans  &trans                        &trans     &trans     &trans      &trans                     &trans  &trans    &trans  &trans    &trans     &trans
+&trans  &kp LC(A)                     &kp LC(Z)  &kp LC(C)  &kp LC(V)   &kp DEL                    &trans  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans
+&trans  &trans                        &trans     &trans     &trans      &trans   &trans    &trans  &trans  &trans    &trans  &trans    &trans     &trans
+                                                 &trans     &trans      &trans   &trans    &trans  &trans  &trans    &trans
             >;
         };
     };
