@@ -40,6 +40,24 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&Switch_Lang>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <(-1)>;
+        };
+
+        new_behavior2: new_behavior2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR2";
+            bindings = <&Switch_Lang>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
     };
 
     macros {
@@ -80,11 +98,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp N1          &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                                 &kp N7                &kp N8             &kp N9     &kp N0   &kp MINUS      &kp EQUAL
-&kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T                                  &kp Y                 &kp U              &kp I      &kp O    &kp P          &kp LBKT
-&Switch_Lang22  &kp A   &kp S   &kp D         &kp F      &kp G                                  &kp H                 &kp J              &kp K      &kp L    &kp SEMI       &kp SQT
-&kp LSHFT       &kp Z   &kp X   &kp C         &kp V      &kp B        &kp LBKT     &kp RBKT     &kp N                 &kp M              &kp COMMA  &kp DOT  &mt BSLH FSLH  &kp RIGHT_SHIFT
-                                &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &lt 3 ENTER  &lt 2 LA(LEFT_SHIFT)  &mt LC(BSPC) BSPC  &kp LALT
+&kp N1                      &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                                 &kp N7                &kp N8             &kp N9     &kp N0   &kp MINUS      &kp EQUAL
+&kp TAB                     &kp Q   &kp W   &kp E         &kp R      &kp T                                  &kp Y                 &kp U              &kp I      &kp O    &kp P          &kp LBKT
+&new_behavior2 0 LG(SPACE)  &kp A   &kp S   &kp D         &kp F      &kp G                                  &kp H                 &kp J              &kp K      &kp L    &kp SEMI       &kp SQT
+&kp LSHFT                   &kp Z   &kp X   &kp C         &kp V      &kp B        &kp LBKT     &kp RBKT     &kp N                 &kp M              &kp COMMA  &kp DOT  &mt BSLH FSLH  &kp RIGHT_SHIFT
+                                            &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &lt 3 ENTER  &lt 2 LA(LEFT_SHIFT)  &mt LC(BSPC) BSPC  &kp LALT
             >;
         };
 
@@ -117,11 +135,11 @@
 
         strelochki {
             bindings = <
-&trans  &kp LA(LS(LEFT_SHIFT))  &kt LA(LEFT_SHIFT)  &Switch_Lang  &Switch_Lang22  &trans                     &trans  &trans    &trans  &trans    &trans     &trans
-&trans  &trans                  &trans              &trans        &trans          &trans                     &trans  &trans    &trans  &trans    &trans     &trans
-&trans  &kp LC(A)               &kp LC(Z)           &kp LC(C)     &kp LC(V)       &kp DEL                    &trans  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans
-&trans  &trans                  &trans              &trans        &trans          &trans   &trans    &trans  &trans  &trans    &trans  &trans    &trans     &trans
-                                                    &trans        &trans          &trans   &trans    &trans  &trans  &trans    &trans
+&trans  &new_behavior 0 LG(SPACE)  &new_behavior2 0 LG(SPACE)  &Switch_Lang  &Switch_Lang22  &trans                     &trans  &trans    &trans  &trans    &trans     &trans
+&trans  &trans                     &trans                      &trans        &trans          &trans                     &trans  &trans    &trans  &trans    &trans     &trans
+&trans  &kp LC(A)                  &kp LC(Z)                   &kp LC(C)     &kp LC(V)       &kp DEL                    &trans  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans
+&trans  &trans                     &trans                      &trans        &trans          &trans   &trans    &trans  &trans  &trans    &trans  &trans    &trans     &trans
+                                                               &trans        &trans          &trans   &trans    &trans  &trans  &trans    &trans
             >;
         };
 
