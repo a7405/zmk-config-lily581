@@ -11,7 +11,14 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mouse {
+            bindings = <&tog 2>;
+            key-positions = <28 27 26>;
+        };
+    };
 
     behaviors {
         ss_hs_modmorph: ss_hs_modmorph {
@@ -47,13 +54,13 @@
             bindings = <&Switch_Lang>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <(-1)>;
+            tapping-term-ms = <300>;
         };
 
-        new_behavior2: new_behavior2 {
+        press_to: press_to {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR2";
-            bindings = <&Switch_Lang>, <&kp>;
+            label = "PRESS_TO";
+            bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -98,11 +105,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp N1                      &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                                 &kp N7                &kp N8    &kp N9     &kp N0   &kp MINUS  &kp EQUAL
-&kp TAB                     &kp Q   &kp W   &kp E         &kp R      &kp T                                  &kp Y                 &kp U     &kp I      &kp O    &kp P      &kp LBKT
-&new_behavior2 0 LG(SPACE)  &kp A   &kp S   &kp D         &kp F      &kp G                                  &kp H                 &kp J     &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT                   &kp Z   &kp X   &kp C         &kp V      &kp B        &trans       &kp RBKT     &kp N                 &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-                                            &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &lt 3 ENTER  &lt 2 LA(LEFT_SHIFT)  &kp BSPC  &kp LALT
+&kp N1                 &kp N2  &kp N3  &kp N4        &kp N5     &kp N6                                 &kp N7                &kp N8    &kp N9     &kp N0   &kp MINUS  &kp EQUAL
+&kp TAB                &kp Q   &kp W   &kp E         &kp R      &kp T                                  &kp Y                 &kp U     &kp I      &kp O    &kp P      &kp LBKT
+&press_to 0 LG(SPACE)  &kp A   &kp S   &kp D         &kp F      &kp G                                  &kp H                 &kp J     &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LSHFT              &kp Z   &kp X   &kp C         &kp V      &kp B        &trans       &kp RBKT     &kp N                 &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
+                                       &kp LEFT_GUI  &kp LCTRL  &lt 1 GRAVE  &kp SPACE    &lt 3 ENTER  &lt 2 LA(LEFT_SHIFT)  &kp BSPC  &kp LALT
             >;
         };
 
@@ -125,11 +132,11 @@
 
         mouse {
             bindings = <
-&trans  &trans  &kp C_VOLUME_DOWN  &kp K_MUTE      &kp C_VOLUME_UP  &trans                                            &trans            &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans  &kp PRINTSCREEN
-&trans  &trans  &trans             &mmv MOVE_UP    &trans           &msc SCRL_UP                                      &msc MOVE_Y(5)    &kt LEFT_SHIFT  &kp UP            &kt RCTRL   &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                                    &msc MOVE_Y(-10)  &kp LEFT        &kp DOWN          &kp RIGHT   &trans  &trans
-&trans  &trans  &trans             &trans          &trans           &trans          &trans      &kt RIGHT_SHIFT       &trans            &trans          &trans            &trans      &trans  &tog 4
-                                   &trans          &trans           &mkp MB1        &mkp MB2    &mt LEFT_SHIFT ENTER  &trans            &trans          &trans
+&press_to 0 ESCAPE  &trans  &kp C_VOLUME_DOWN  &kp K_MUTE      &kp C_VOLUME_UP  &trans                                            &trans            &kp C_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans  &kp PRINTSCREEN
+&trans              &trans  &trans             &mmv MOVE_UP    &trans           &msc SCRL_UP                                      &msc MOVE_Y(5)    &kt LEFT_SHIFT  &kp UP            &kt RCTRL   &trans  &trans
+&trans              &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                                    &msc MOVE_Y(-10)  &kp LEFT        &kp DOWN          &kp RIGHT   &trans  &trans
+&trans              &trans  &trans             &trans          &trans           &trans          &trans      &kt RIGHT_SHIFT       &trans            &trans          &trans            &trans      &trans  &tog 4
+                                               &trans          &trans           &mkp MB1        &mkp MB2    &mt LEFT_SHIFT ENTER  &trans            &trans          &trans
             >;
         };
 
